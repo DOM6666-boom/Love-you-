@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 90vh;
+        }
+
+        .container {
+            background-color: rgb(255, 182, 206);
+            padding: 1rem;
+            border-radius: 10px;
+            width: 300px;
+        }
+
+        .btn {
+            padding: 0.5rem 2rem;
+            border: none;
+            outline: none;
+            font-weight: bold;
+            border-radius: 10px;
+
+        }
+
+        .btn-primary {
+            background-color: rgb(0, 166, 0);
+            color: white;
+        }
+
+        .btn-secondary {
+            background-color: rgb(255, 0, 0);
+            color: white;
+        }
+
+        .moving:hover {
+            margin-left: 50px;
+        }
+    </style>
+</head>
+
+<body>
+    <section class="container">
+        <h2 class="text">Okay, serious question💌: If I asked you to be your boyfriend, what would you say?</h2>
+        <button class="btn btn-primary">Yes</button>
+        <button class="btn btn-secondary moving ">No</button>
+    </section>
+    <script>
+        const btnAgree = document.querySelector(".btn-primary");
+        const btnDisagree = document.querySelector(".btn-secondary");
+        const text = document.querySelector(".text");
+
+        btnAgree.addEventListener("click", function () {
+            text.innerHTML = "You just made me the happiest person ever   ";
+            btnDisagree.addEventListener("mouseover", function () { // Corrected typo here
+                text.innerHTML = "mix jg reject me";
+            });
+        });
+    </script>
+</body>
+
+</html>
